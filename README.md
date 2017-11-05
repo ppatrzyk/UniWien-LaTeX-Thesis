@@ -1,5 +1,5 @@
 # UniWien-LaTeX-Thesis
-An unofficial LaTeX template for a Master's Thesis at the University of Vienna (Universität Wien). I meets the [requirements](https://ssc-sozialwissenschaften.univie.ac.at/formulare/for-prref/) for the design of the first page.
+An unofficial LaTeX template for a Master's Thesis at the University of Vienna (Universität Wien). It meets the [requirements](https://ssc-sozialwissenschaften.univie.ac.at/formulare/for-prref/) for the design of the first page.
 
 You need to edit *main.tex* file to insert:
 
