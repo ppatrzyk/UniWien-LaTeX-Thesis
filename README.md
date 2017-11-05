@@ -6,7 +6,7 @@ You need to edit *main.tex* file to insert:
 - all your personal details (name, title, program),
 - abstracts,
 - CV details,
-- specify *.tex* files with the actual content of the thesis (in this template, these are *ch1.tex*, *ch2.tex*, and *ch3.tex*).
+- specify *.tex* files with the actual content of the thesis (in this template, these are *ch1.tex* and *ch2.tex*).
 
 All places where your data needs to be inserted are indicated by comments.
 
