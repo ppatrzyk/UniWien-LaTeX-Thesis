@@ -1,0 +1,204 @@
+\documentclass[a4paper,11pt]{report}
+\newcommand{\linespacing}{1.5}
+\renewcommand{\baselinestretch}{\linespacing}
+
+\usepackage{fontawesome}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{graphicx,color}
+\usepackage{epstopdf}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headsep=10pt]{geometry}
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarksnumbered,plainpages=false]{hyperref}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa]{biblatex} % this template uses APA bibliography style, change it here if you need
+\addbibresource{master.bib} % a .bib file with two example references is included; change the .bib filename here to include your own database
+\DeclareLanguageMapping{american}{american-apa}
+\renewcommand{\arraystretch}{1.4}
+\flushbottom
+
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%
+% uncomment the macro below if you run into problems with both doi and url printed in the bibliography
+% method taken from:
+% https://tex.stackexchange.com/questions/154864/biblatex-use-doi-only-if-there-is-no-url
+%
+%\renewbibmacro*{doi+eprint+url}{%
+%	 \iftoggle{bbx:url} {\iffieldundef{doi}{\usebibmacro{url+urldate}}{}} {}%
+%	 \newunit\newblock \iftoggle{bbx:eprint} {\usebibmacro{eprint}} {}%
+%	  \newunit\newblock \iftoggle{bbx:doi} {\printfield{doi}} {}}
+%
+%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+\begin{flushright}
+% https://public.univie.ac.at/en/downloads/logos/
+\includegraphics[width=7cm]{uni1-eps-converted-to}
+\end{flushright}	
+\vskip20mm
+\begin{center}
+\huge\textbf{MASTERARBEIT / MASTER'S THESIS}
+\vskip15mm
+\normalsize{Titel der Masterarbeit / Title of the Master's Thesis}
+
+\LARGE\textbf{``Thesis at UniWien: A template''} % Insert title here
+\vskip15mm
+\normalsize{verfasst von / submitted by}
+
+\Large\textbf{Your name, Bc.} % Insert your name in this line
+\vskip15mm
+\normalsize{angestrebter akademischer Grad / in partial fulfillment of the requirements for the degree of}
+
+\Large\textbf{Master of Science (MSc)}
+
+\small
+\end{center}
+\vskip15mm
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\begin{flushleft}
+	Wien, 2016 / Vienna 2016 % Insert graduation year in this line
+	\vfill
+\addtolength{\tabcolsep}{-6pt} 
+\begin{table}[h!]
+	\begingroup
+	\renewcommand*{\arraystretch}{1.2}
+	%\renewcommand*{\linespacing}{1}
+	\renewcommand\baselinestretch{1}
+	\small
+	\begin{tabular}{p{7cm} p{10cm}}
+		Studienkennzahl lt. Studienblatt / \newline degree programme code as it appears on \newline the student record sheet: & A 066 013 \\
+		Studienrichtung lt. Studienblatt / \newline degree programme as it appears on \newline the student record sheet:& Joint Degree Programme MEi:CogSci Cognitive Science \\
+		Betreut von / Supervisor: & Your supervisor's name \\ % Insert your program/supervisor here
+	\end{tabular}
+	\endgroup
+\end{table}
+\addtolength{\tabcolsep}{6pt} 
+\end{flushleft}	
+\endgroup	
+
+\chapter*{}
+\thispagestyle{empty}
+
+
+\chapter*{Acknowledgements}
+\renewcommand{\baselinestretch}{\linespacing}
+\small\normalsize
+Thank you X, Y, and Z.
+
+% Some of the code for creating ToC id adapted from the following template:
+% https://www.sharelatex.com/templates/thesis/university-of-sussex-thesis
+\newpage
+\pdfbookmark[0]{Contents}{contents_bookmark}
+\renewcommand{\baselinestretch}{1.3}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.5}\normalsize
+\clearpage
+\chapter*{Abstract}
+
+Abstract in English.
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\clearpage
+\chapter*{Zusammenfassung}
+
+Abstract in German.
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+\listoftables
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoffigures
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+
+
+\newpage
+\pagenumbering{arabic}
+
+% Insert additional chapters here
+\include{ch1}
+\include{ch2}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\printbibliography
+\noindent
+
+\appendix
+\include{appendix}
+
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Curriculum Vitae}
+
+%\chapter*{Curriculum Vitae}
+\newpage
+
+\renewcommand\baselinestretch{0.8} % adjust this parameter to fit your cv on one page
+
+% Adjust the cv template below for your own needs
+
+\begin{table}[h!]
+	\begin{tabular}{ p{220pt} p{220pt} }
+		\multicolumn{2}{c}{\Huge{\textsc{Your Name}}} \\ \hline\noalign{\vskip 1mm}
+		{\faBuildingO} Address line 1 & {\faPhone} +43 000 000 000 \\
+		\hspace{4.4mm}Address line 2 & {\faEnvelopeO} \href{mailto:you@gmail.com}{you@gmail.com}\\
+		\hspace{4.4mm}Address line 3 & {\faGlobe} \hspace{0.5mm}\href{http://www.univie.ac.at/}{http://www.univie.ac.at/} \\
+		\hline\noalign{\vskip 1mm}
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\begin{tabular}{ p{60pt} p{380pt} }
+		\large{\textsc{Education}} & \\ \hline\noalign{\vskip 1mm}
+		2016/07 & \textbf{MSc Cognitive Science} \\
+		& University of Vienna \\
+		2014/07 & \textbf{Bc. Something else} \\
+		& University of Something else \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\begin{tabular}{ p{60pt} p{380pt} }
+		\large{\textsc{Employment}} & \\ \hline\noalign{\vskip 1mm}
+		2016/07 & \textbf{Your position 1} \\
+		& Workplace \\
+		& Address \\
+		& Responsibilities: Something interesting \\
+		2015/07 & \textbf{Your position 2} \\
+		& Workplace \\
+		& Address \\
+		& Responsibilities: Something interesting \\
+		2014/07 & \textbf{Your position 3} \\
+		& Workplace \\
+		& Address \\
+		& Responsibilities: Something interesting \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\begin{tabular}{ p{60pt} p{380pt}  }
+		\multicolumn{2}{l}{\large{\textsc{Technical Skills}}} \\ \hline\noalign{\vskip 1mm}
+		Languages: & English \\
+		Programming: & \LaTeX{} \\
+		Other: &  \\
+	\end{tabular}
+\end{table}
+\noindent
+
+\normalsize
+\vfill
+
+
+\end{document}
